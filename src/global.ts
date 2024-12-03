@@ -1,39 +1,38 @@
 import { createGlobalStyle } from 'styled-components'
-import { Theme } from './themes/light'
+import type { Theme } from './themes/light'
 import styled from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
   :root {
-    --cor-principal: ${(props) => (props.theme as Theme).corPrincipal}
-    --cor-secundaria: ${(props) => (props.theme as Theme).corSecundaria}
+    --cor-principal: ${(props) => (props.theme as Theme).corPrincipal};
+    --cor-secundaria: ${(props) => (props.theme as Theme).corSecundaria};
   }
 
   * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Lato, sans-serif;
-  list-style: none;
-}
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    list-style: none;
+    
+  }
 
-body {
-  padding-bottom: 120px;
-  background-color: ${(props) => (props.theme as Theme).corDeFundo}
-}
+  body {
+    padding-bottom: 120px;
+    background-color:  ${(props) => (props.theme as Theme).corDeFundo};
+  }
 
-.container {
-  max-width: 1024px;
-  width: 100%;
-  margin: 0 auto;
+  .container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
 
-  @media (max-width: 1024px) {
-    .container {
+    @media (max-width: 1024px) {
       max-width: 80%;
     }
   }
-}
-
 `
+
 export const Botao = styled.button`
   border: 1px solid var(--cor-principal);
   background-color: var(--cor-secundaria);

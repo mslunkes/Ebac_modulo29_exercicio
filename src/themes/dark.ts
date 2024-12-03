@@ -5,3 +5,9 @@ const temaDark = {
 }
 
 export default temaDark
+
+export interface Theme {
+  corPrincipal: string
+  corSecundaria: string
+  corDeFundo: string
+}
